@@ -3,18 +3,112 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Admin • Sachs Gruppe</title>
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/decap-cms@3.0.12/dist/decap-cms.js"></script>
+  <title>Sachs Gruppe • Energie • Gebäude • Sicherheit</title>
+  <meta name="description" content="Unternehmensseite mit CMS">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", (user) => { if (!user) window.netlifyIdentity.open("login"); });
-      window.netlifyIdentity.on("login", () => { document.location.href = "/admin/"; });
-      window.netlifyIdentity.init();
-    }
-  </script>
-  <script> CMS.init(); </script>
+<body data-page="index">
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.svg" alt="Sachs Gruppe">
+      <strong>Sachs Gruppe</strong>
+    </a>
+    <nav aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="energiehaus.html">Energiehaus Sachs</a></li>
+        <li><a href="gebaeudemanagement.html">Sachs Gebäudemanagement</a></li>
+        <li><a href="sicherheit.html">Sachs Sicherheit</a></li>
+        <li><a href="index.html#kontakt">Kontakt</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<section class="hero">
+  <div class="container wrap">
+    <div>
+      <h1 data-hero-title>...</h1>
+      <p data-hero-text>...</p>
+      <div class="cta">
+        <a class="btn primary" href="#kontakt">Anfrage senden</a>
+        <a class="btn" href="energiehaus.html">Leistungen ansehen</a>
+      </div>
+    </div>
+    <div>
+      <img data-hero-image src="" alt="" style="width:100%; border-radius:12px;">
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <h2>Unsere Bereiche</h2>
+    <div class="cards">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=1200&auto=format&fit=crop" alt="Photovoltaik">
+        <h3>Energiehaus Sachs</h3>
+        <p>Photovoltaik, Wärmepumpen und Speicher.</p>
+        <a class="btn" href="energiehaus.html">Mehr erfahren</a>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1615876234886-fd9a39fda97e?q=80&w=1200&auto=format&fit=crop" alt="Bad">
+        <h3>Sachs Gebäudemanagement</h3>
+        <p>Sanierung und Instandhaltung. Bäder, Innenausbau, Fassade.</p>
+        <a class="btn" href="gebaeudemanagement.html">Mehr erfahren</a>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1556185781-a47769abb7ee?q=80&w=1200&auto=format&fit=crop" alt="Sicherheit">
+        <h3>Sachs Sicherheit</h3>
+        <p>Alarm, Video, Zutritt. Planung, Montage, Wartung.</p>
+        <a class="btn" href="sicherheit.html">Mehr erfahren</a>
+      </article>
+    </div>
+  </div>
+</section>
+<section id="kontakt" class="section">
+  <div class="container">
+    <h2>Kontakt</h2>
+    <form data-contact-form>
+      <label for="name">Name*</label>
+      <input id="name" name="name" required>
+      <label for="email">E Mail*</label>
+      <input id="email" type="email" name="email" required>
+      <label for="bereich">Bereich</label>
+      <select id="bereich" name="bereich">
+        <option>Energiehaus Sachs</option>
+        <option>Sachs Gebäudemanagement</option>
+        <option>Sachs Sicherheit</option>
+      </select>
+      <label for="message">Nachricht*</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+      <button class="btn primary" type="submit">Senden</button>
+    </form>
+  </div>
+</section>
+
+
+<footer>
+  <div class="container footer-inner">
+    <div>
+      <strong>Sachs Gruppe</strong><br>
+      <small>CEO Patrick Sachs</small><br>
+      <small>Beispielstraße 1, 12345 Musterstadt</small><br>
+      <small><a href="tel:+49999999999">+49 9999 99999</a> · <a href="mailto:info@sachs-gruppe.de">info@sachs-gruppe.de</a></small>
+    </div>
+    <div>
+      <small><a href="impressum.html">Impressum</a></small><br>
+      <small><a href="datenschutz.html">Datenschutz</a></small>
+    </div>
+    <div>
+      <small>© 2025 Sachs Gruppe</small><br>
+      <small class="note">Platzhalterinhalte</small>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+
 </body>
 </html>
