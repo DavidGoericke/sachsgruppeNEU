@@ -1,0 +1,65 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+locale: "de"
+
+collections:
+  - name: "startseite"
+    label: "Startseite"
+    editor: { preview: false }
+    files:
+      - file: "content/index.json"
+        label: "Startseite Inhalte"
+        name: "startseite_content"
+        fields:
+          - { label: "Hero Überschrift", name: "hero_title", widget: "string" }
+          - { label: "Hero Text", name: "hero_text", widget: "text" }
+          - { label: "Hero Bild", name: "hero_image", widget: "image" }
+
+  - name: "energiehaus_sachs"
+    label: "Energiehaus Sachs"
+    editor: { preview: false }
+    files:
+      - file: "content/energiehaus.json"
+        label: "Energiehaus Inhalte"
+        name: "energiehaus_content"
+        fields:
+          - { label: "Titel", name: "title", widget: "string" }
+          - { label: "Intro", name: "intro", widget: "text" }
+
+  - name: "gebaeudemanagement_sachs"
+    label: "Sachs Gebäudemanagement"
+    editor: { preview: false }
+    files:
+      - file: "content/gebaeudemanagement.json"
+        label: "Gebäudemanagement Inhalte"
+        name: "gebaeudemanagement_content"
+        fields:
+          - { label: "Titel", name: "title", widget: "string" }
+          - { label: "Intro", name: "intro", widget: "text" }
+
+  - name: "sicherheit_sachs"
+    label: "Sachs Sicherheit"
+    editor: { preview: false }
+    files:
+      - file: "content/sicherheit.json"
+        label: "Sicherheit Inhalte"
+        name: "sicherheit_content"
+        fields:
+          - { label: "Titel", name: "title", widget: "string" }
+          - { label: "Intro", name: "intro", widget: "text" }
+
+  - name: "rechtliches_sachs"
+    label: "Rechtliches"
+    editor: { preview: false }
+    files:
+      - file: "content/legal.json"
+        label: "Impressum & Datenschutz"
+        name: "rechtliches_content_file"
+        fields:
+          - { label: "Impressum (HTML)", name: "impressum_html", widget: "text" }
+          - { label: "Datenschutz (HTML)", name: "datenschutz_html", widget: "text" }
